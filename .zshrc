@@ -10,6 +10,12 @@ for f in "$CONFD_DIR"/*.zsh(N); do
   fi
 done
 
+for f in "$CONFD_DIR.ignored"/*.zsh(N); do
+  if [ -r "$f" ] && [ -f "$f" ]; then
+    source "$f"
+  fi
+done
+
 #### History search with arrow keys #####
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down

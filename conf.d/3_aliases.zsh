@@ -1,0 +1,20 @@
+## Aliases
+alias rm='trash'
+alias be='bundle exec'
+alias diff='colordiff'
+alias d='docker'
+alias dl='docker ps -l -q'
+alias dps='docker ps --format "{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Command}}\t{{.RunningFor}}"'
+alias dexec='docker exec -it (dps | peco | cut -f 1) bash'
+alias drun='docker run --rm -it'
+alias dc='docker compose'
+alias dcrun='docker compose run --rm'
+alias dcexe='docker compose exec'
+alias dgc='docker container prune && docker image prune'
+alias mux='tmuxinator'
+alias gitgc='git remote prune origin; git gc'
+alias ip_addr='ipconfig getifaddr en0'
+alias brewup='brew update && brew upgrade && brew cleanup'
+alias opendevc='code --folder-uri vscode-remote://ssh-remote+dev/home/higuchi-tetsuro/work'
+
+type hub && eval $(hub alias -s)
