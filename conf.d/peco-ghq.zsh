@@ -1,2 +1,2 @@
 zle -N zsh-peco-ghq
-bindkey '^g' zsh-peco-ghq
+bindkey '^t' zsh-peco-ghq

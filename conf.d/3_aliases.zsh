@@ -16,5 +16,3 @@ alias gitgc='git remote prune origin; git gc'
 alias ip_addr='ipconfig getifaddr en0'
 alias brewup='brew update && brew upgrade && brew cleanup'
 alias opendevc='code --folder-uri vscode-remote://ssh-remote+dev/home/higuchi-tetsuro/work'
-
-type hub && eval $(hub alias -s)

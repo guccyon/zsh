@@ -16,6 +16,14 @@ for f in "$CONFD_DIR.ignored"/*.zsh(N); do
   fi
 done
 
+# Load shell completion definitions after commands and aliases are defined.
+COMPLETIONS_DIR="$HOME/.config/zsh/completions"
+for f in "$COMPLETIONS_DIR"/*.zsh(N); do
+  if [ -r "$f" ] && [ -f "$f" ]; then
+    source "$f"
+  fi
+done
+
 #### History search with arrow keys #####
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
