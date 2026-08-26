@@ -24,6 +24,10 @@ for f in "$COMPLETIONS_DIR"/*.zsh(N); do
   fi
 done
 
+# Use Emacs-style ZLE bindings even though $EDITOR is vim.
+# Without this, zsh selects vi insert mode and Ctrl+E is inserted as ^E.
+bindkey -e
+
 #### History search with arrow keys #####
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
