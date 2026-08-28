@@ -16,6 +16,14 @@ for f in "$CONFD_DIR.ignored"/*.zsh(N); do
   fi
 done
 
+#### Command history #####
+# Keep up to 100,000 commands across shell sessions.
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=110000
+SAVEHIST=100000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+
 # Load shell completion definitions after commands and aliases are defined.
 COMPLETIONS_DIR="$HOME/.config/zsh/completions"
 for f in "$COMPLETIONS_DIR"/*.zsh(N); do
