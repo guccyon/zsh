@@ -16,6 +16,14 @@ for f in "$CONFD_DIR.ignored"/*.zsh(N); do
   fi
 done
 
+# Load functions/*.zsh
+FUNCTIONS_DIR="$HOME/.config/zsh/functions"
+for f in "$FUNCTIONS_DIR"/*.zsh(N); do
+  if [ -r "$f" ] && [ -f "$f" ]; then
+    source "$f"
+  fi
+done
+
 #### Command history #####
 # Keep up to 100,000 commands across shell sessions.
 HISTFILE="$HOME/.zsh_history"
